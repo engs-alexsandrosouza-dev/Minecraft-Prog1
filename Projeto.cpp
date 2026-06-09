@@ -185,30 +185,16 @@ int main() {
 		pos [user][gamer] = {'x'};     
 
 		switch (movimento) {
-		case 'w':
-			user -=1;
-			break;
-		case 'W':
-			user -= 1;
-			break;
-		case 's':
-			user += 1;
-			break;
-		case 'S':
-			user += 1;
-			break;                      
-		case 'a':
-			gamer -= 1;
-			break;
-		case 'A':
-			gamer -= 1;
-			break;
-		case 'd':
-			gamer += 1;
-			break;
-		case 'D':
-			gamer += 1;
-			break;
+		case 'w':			user -=1;			break;
+		case 'W':			user -= 1;			break;
+		case 's':			user += 1;  		break;
+		case 'S':			user += 1;			break;                      
+		case 'a':			gamer -= 1;			break;
+		case 'A':			gamer -= 1;			break;
+		case 'd':			gamer += 1;			break;
+		case 'D':			gamer += 1;			break;
+		
+		default: cout << "\n Movimento inválido!! ";
 		}
 
 		if (user > 19) {
@@ -258,7 +244,6 @@ int main() {
 		}
 
 
-
 		pos [user][gamer] = {'@'};     
 
 		switch (missao) {
@@ -266,8 +251,6 @@ int main() {
 		case 1:
 			if (pedrasnec <= pedras && gravetosnec <= gravetos) {
 				status = "Concluído";
-
-
 			}
 			else {
 				status = "Em progresso";
@@ -296,7 +279,6 @@ int main() {
 			}
 			break;
 		}
-
 	}
 	cout << "\n----------------------------------";
 	cout << "\nStatus atual: " << status;
